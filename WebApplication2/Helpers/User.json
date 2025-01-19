@@ -1,0 +1,24 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Mehemmed",
+    "Surname": "Humbetli",
+    "Image": "https://www.google.com/imgres?q=john%20stathem&imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2024%2F01%2FGettyImages-1849594759-e1704908885262.jpg%3Fw%3D1024&imgrefurl=https%3A%2F%2Fvariety.com%2Ft%2Fjason-statham%2F&docid=Xk4dmw7kK8Zn9M&tbnid=7SRSBcdLxqS_zM&vet=12ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA..i&w=1024&h=512&hcb=2&ved=2ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA",
+    "Age": "20"
+
+  },
+  {
+    "Id": 2,
+    "Name": "Ali",
+    "Surname": "Alili",
+    "Image": "https://www.google.com/imgres?q=john%20stathem&imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2024%2F01%2FGettyImages-1849594759-e1704908885262.jpg%3Fw%3D1024&imgrefurl=https%3A%2F%2Fvariety.com%2Ft%2Fjason-statham%2F&docid=Xk4dmw7kK8Zn9M&tbnid=7SRSBcdLxqS_zM&vet=12ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA..i&w=1024&h=512&hcb=2&ved=2ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA",
+    "Age": "39"
+  },
+  {
+    "Id": 3,
+    "Name": "Aydin",
+    "Surname": "Abdulayev",
+    "Image": "https://www.google.com/imgres?q=john%20stathem&imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2024%2F01%2FGettyImages-1849594759-e1704908885262.jpg%3Fw%3D1024&imgrefurl=https%3A%2F%2Fvariety.com%2Ft%2Fjason-statham%2F&docid=Xk4dmw7kK8Zn9M&tbnid=7SRSBcdLxqS_zM&vet=12ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA..i&w=1024&h=512&hcb=2&ved=2ahUKEwjJ5Z20zYGLAxXUQfEDHWcKCikQM3oECEAQAA",
+    "Age": "11"
+  }
+]
