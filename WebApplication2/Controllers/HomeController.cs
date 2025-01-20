@@ -1,23 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Text.Json;
+using Microsoft.Extensions.Hosting;
+using WebApplication2.Entites;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace WebApplication2.Controllers
 {
-    public string path = "User.json";
-
     public class HomeController : Controller
     {
-        public IActionResult ViewResult()
+        private readonly IHostEnvironment _hostingEnvironment;
+
+        public HomeController(IHostEnvironment hostingEnvironment)
         {
-            return View();
+            _hostingEnvironment = hostingEnvironment;
+        }
+
+        public IActionResult Index()
+        {
+            var rootPath = _hostingEnvironment.ContentRootPath;
+            var filePath = Path.Combine(rootPath, "Helpers", "User.json");
+            List<User> users = null;
+
+            using (StreamReader r = new StreamReader(filePath))
+            {
+                string json = r.ReadToEnd();
+                users = JsonConvert.DeserializeObject<List<User>>(json);
+            }
+
+            return View(users);
         }
     }
 }
