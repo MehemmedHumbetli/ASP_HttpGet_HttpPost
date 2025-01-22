@@ -58,24 +58,31 @@ namespace WebApplication2.Controllers
         [HttpPost]
         public IActionResult Add(UserAddViewModel viewModel)
         {
-            var newUser = new Entites.User
+            if (ModelState.IsValid)
             {
-                Name = viewModel.User.Name,
-                Surname = viewModel.User.Surname,
-                Age = viewModel.User.Age,
-                Image = viewModel.User.Image
-            };
+                var newUser = new Entites.User
+                {
+                    Id = viewModel.User.Id,
+                    Name = viewModel.User.Name,
+                    Surname = viewModel.User.Surname,
+                    Age = viewModel.User.Age,
+                    Image = viewModel.User.Image
+                };
 
-            var users = GetUsersFromJson();
-            users.Add(newUser);
+                var users = GetUsersFromJson();
+                users.Add(newUser);
 
-            var rootPath = _hostingEnvironment.ContentRootPath;
-            var filePath = Path.Combine(rootPath, "Helpers", "User.json");
-            var json = JsonConvert.SerializeObject(users, Formatting.Indented);
-            System.IO.File.WriteAllText(filePath, json);
+                var rootPath = _hostingEnvironment.ContentRootPath;
+                var filePath = Path.Combine(rootPath, "Helpers", "User.json");
+                var json = JsonConvert.SerializeObject(users, Formatting.Indented);
+                System.IO.File.WriteAllText(filePath, json);
+
+                return RedirectToAction("Index");
+            }
 
             return View(viewModel);
         }
+
 
     }
 }
