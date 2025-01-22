@@ -4,14 +4,14 @@
     Layout = null;
 }
 
-<!Doctype html/>
-<html>
-    <body>
-        <table class="table">
+<h2>All User Details</h2>
+<table class="table">
     <thead>
         <tr>
             <th>Name</th>
             <th>Surname</th>
+            <th>Age</th>
+            <th>Image</th>
         </tr>
     </thead>
     <tbody>
@@ -20,11 +20,9 @@
             <tr>
                 <td>@user.Name</td>
                 <td>@user.Surname</td>
+                <td>@user.Age</td>
+                <td>@user.Image</td>
             </tr>
         }
     </tbody>
 </table>
-        <a asp-controller="Home" asp-action="Details">Show more details</a>
-        <a asp-controller="Home" asp-action="Add">New User Add</a>
-    </body>
-</html>

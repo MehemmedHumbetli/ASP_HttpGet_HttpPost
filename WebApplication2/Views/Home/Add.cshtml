@@ -1,0 +1,47 @@
+﻿@model WebApplication2.Models.UserAddViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html/>
+
+<html>
+    <body>
+        <form>
+            <section>
+                <label asp-for="User.Id"></label>
+                <input asp-for="User.Id"/>
+                <span style="color:red" asp-validation-for="User.Id"></span>
+            </section>
+
+            <section>
+                <label asp-for="User.Name"></label>
+                <input asp-for="User.Name"/>
+                <span style="color:red" asp-validation-for="User.Name"></span>
+            </section>
+
+            <section>
+                <label asp-for="User.Surname"></label>
+                <input asp-for="User.Surname"/>
+                <span style="color:red" asp-validation-for="User.Surname"></span>
+            </section>
+
+            <section>
+                <label asp-for="User.Age"></label>
+                <input asp-for="User.Age"/>
+                <span style="color:red" asp-validation-for="User.Age"></span>
+            </section>
+
+            <section>
+                <label asp-for="User.Image"></label>
+                <input asp-for="User.Image"/>
+                <span style="color:red" asp-validation-for="User.Image"></span>
+            </section>
+
+            <section>
+                <button type="submit">Add</button>
+            </section>
+        </form>
+    </body>
+</html>
