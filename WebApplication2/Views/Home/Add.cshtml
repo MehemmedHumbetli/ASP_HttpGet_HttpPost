@@ -6,42 +6,51 @@
 
 <!DOCTYPE html/>
 
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
 <html>
-    <body>
-        <form asp-controller="Home" asp-action="Add" method="post">
-            <section>
-                <label asp-for="User.Id"></label>
-                <input asp-for="User.Id"/>
-                <span style="color:red" asp-validation-for="User.Id"></span>
-            </section>
+    <body class="h-screen"> 
+        <div class="h-full flex items-center justify-center"> 
 
-            <section>
-                <label asp-for="User.Name"></label>
-                <input asp-for="User.Name"/>
-                <span style="color:red" asp-validation-for="User.Name"></span>
-            </section>
+            <img  class="w-[900px] h-[600px] object-cover rounded-lg pr-40" src="https://static.vecteezy.com/system/resources/previews/003/689/228/original/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg"/>
+            
+            <form asp-controller="Home" asp-action="Add" method="post" class="w-[300px] p-6 bg-white rounded-lg shadow-lg">
+                <section>
+                    <label asp-for="User.Id"></label>
+                    <input asp-for="User.Id" class="w-full p-2 border border-gray-300 rounded-md"/>
+                    <span style="color:red" asp-validation-for="User.Id"></span>
+                </section>
 
-            <section>
-                <label asp-for="User.Surname"></label>
-                <input asp-for="User.Surname"/>
-                <span style="color:red" asp-validation-for="User.Surname"></span>
-            </section>
+                <section>
+                    <label asp-for="User.Name"></label>
+                    <input asp-for="User.Name" class="w-full p-2 border border-gray-300 rounded-md"/>
+                    <span style="color:red" asp-validation-for="User.Name"></span>
+                </section>
 
-            <section>
-                <label asp-for="User.Age"></label>
-                <input asp-for="User.Age"/>
-                <span style="color:red" asp-validation-for="User.Age"></span>
-            </section>
+                <section>
+                    <label asp-for="User.Surname"></label>
+                    <input asp-for="User.Surname" class="w-full p-2 border border-gray-300 rounded-md"/>
+                    <span style="color:red" asp-validation-for="User.Surname"></span>
+                </section>
 
-            <section>
-                <label asp-for="User.Image"></label>
-                <input asp-for="User.Image"/>
-                <span style="color:red" asp-validation-for="User.Image"></span>
-            </section>
+                <section>
+                    <label asp-for="User.Age"></label>
+                    <input asp-for="User.Age" class="w-full p-2 border border-gray-300 rounded-md"/>
+                    <span style="color:red" asp-validation-for="User.Age"></span>
+                </section>
 
-            <section>
-                <button type="submit">Add</button>
-            </section>
-        </form>
+                <section>
+                    <label asp-for="User.Image"></label>
+                    <input asp-for="User.Image" class="w-full p-2 border border-gray-300 rounded-md"/>
+                    <span style="color:red" asp-validation-for="User.Image"></span>
+                </section>
+
+                <section>
+                    <button type="submit" class="w-full bg-blue-500 text-white mt-2 py-2 rounded-lg hover:bg-blue-600">Add</button>
+                </section>
+            </form>
+        </div>
     </body>
 </html>
