@@ -1,0 +1,32 @@
+﻿@model WebApplication2.Models.UserAddViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html/>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<html>
+    <body class="h-screen">
+        <div class="h-full flex items-center justify-center"> 
+
+            <img  class="w-[900px] h-[600px] object-cover rounded-lg pr-40" src="https://img.freepik.com/free-vector/removing-goods-from-basket-refusing-purchase-changing-decision-item-deletion-emptying-trash-online-shopping-app-laptop-user-cartoon-character-vector-isolated-concept-metaphor-illustration_335657-2843.jpg?t=st=1737807423~exp=1737811023~hmac=b17624e65987ec5073cfcfed9bc0037eb3e0b4bbcea796b24919e2aa3248c85a&w=740"/>
+            
+            <form asp-controller="Home" asp-action="Delete" method="post" class="w-[300px] p-6 bg-white rounded-lg shadow-lg">
+                <section>
+                    <label asp-for="User.Id"></label>
+                    <input asp-for="User.Id" name="id" class="w-full p-2 border border-gray-300 rounded-md"/>
+                </section>
+
+                <section>
+                    <button type="submit" class="w-full bg-red-500 text-white mt-2 py-2 rounded-lg hover:bg-red-600">Save</button>
+                </section>
+            </form>
+        </div>
+    </body>
+</html>
+

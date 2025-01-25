@@ -85,10 +85,16 @@ namespace WebApplication2.Controllers
 
                 return RedirectToAction("Index");
             }
-
             return View(viewModel);
         }
         #endregion
+
+        [HttpGet]
+        public IActionResult Delete()
+        {
+            var vm = new UserAddViewModel();
+            return View(vm);
+        }
 
         [HttpPost]
         public IActionResult Delete(int id)
@@ -98,7 +104,6 @@ namespace WebApplication2.Controllers
             var userToRemove = users.FirstOrDefault(u => u.Id == id);
 
             users.Remove(userToRemove);
-
             WriteToJson(users);
             return RedirectToAction("Index");
         }

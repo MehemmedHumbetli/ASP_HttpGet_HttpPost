@@ -4,25 +4,26 @@
     Layout = null;
 }
 
-<!DOCTYPE html/>
+<!DOCTYPE html>
 
+<html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>User Details</title>
 </head>
 
-<html>
-    <body>
-        <h2 class="text-3xl font-semibold text-center mb-6">All User Details</h2>
-        <table class="min-w-full border border-gray-300 shadow-lg">
-            <thead class="bg-blue-500 text-white">
+<body>
+    <h2 class="text-3xl font-semibold text-center mb-6">All User Details</h2>
+    <table class="min-w-full border border-gray-300 shadow-lg">
+        <thead class="bg-blue-500 text-white">
             <tr class="px-6 py-3 text-left">
                 <th>Id</th>
-                <th">Name</th>
+                <th>Name</th>
                 <th>Surname</th>
-                <th">Age</th>
-                <th">Image</th>
+                <th>Age</th>
+                <th>Image</th>
             </tr>
-            </thead>
+        </thead>
         <tbody class="bg-white">
             @foreach (var user in Model.Users)
             {
@@ -35,6 +36,6 @@
                 </tr>
             }
         </tbody>
-        </table>  
-    </body>
+    </table>
+</body>
 </html>
